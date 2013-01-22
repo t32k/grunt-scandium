@@ -44,8 +44,8 @@ scandium: {
 
 # Changelog
 
-v0.2.0: Add support for Titanium Log
-v0.1.0: Release.
+- v0.2.0: Add support for Titanium Log
+- v0.1.0: Release.
 
 ----
 

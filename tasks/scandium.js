@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         worker.stdout.on('data', function(data){
             grunt.log.write('>> ' + data);
         });
-        worker.stdout.on('data', function(data){
+        worker.stderr.on('data', function(data){
             grunt.log.error(data);
         });
     });
