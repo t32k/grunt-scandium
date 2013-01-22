@@ -6,16 +6,16 @@ module.exports = function(grunt){
 		scandium: {
 			ios: {
 				platform : 'ios',
-				project_dir : '/Users/t32k/Desktop/cli_test',
-				force: false,
-				build_only: true,
+				project_dir : '/REPOS/grunt-scandium/sample_ti_proj',
+				force: true,
+				build_only: false,
 				options: {
 					device_family: 'iphone'
 				}
 			},
 			android: {
 				platform : 'android',
-				project_dir : '/Users/t32k/Desktop/cli_test',
+				//project_dir : '/Users/t32k/Desktop/cli_test',
 				force: true,
 				build_only: false,
 				options: {

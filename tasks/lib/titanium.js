@@ -8,8 +8,8 @@ exports.init = function(grunt) {
 
         // Generic Options
         // ============================================
-        var params          = [],
-            command         = { cmd: 'titanium', args: params },
+        var tiArgs          = [],
+            command         = { cmd: 'titanium', args: tiArgs },
             // <boolean>: Only perform the build; when specified, does not install or run the app.
             build_only      = data.build_only,
             // <type>: Type of deployment: production, test, or development.
@@ -26,22 +26,22 @@ exports.init = function(grunt) {
             sdk             = data.sdk;
 
         if ( platform !== undefined && project_dir !== undefined ) {
-            params.push('build', '--platform', platform, '--project_dir', project_dir);
+            tiArgs.push('build', '--platform', platform, '--project_dir', project_dir);
         }
         if ( build_only === true ) {
-            params.push('--build-only');
+            tiArgs.push('--build-only');
         }
         if ( deploy_type !== undefined ) {
-            params.push('--deploy-type', deploy_type);
+            tiArgs.push('--deploy-type', deploy_type);
         }
         if ( force === true ) {
-            params.push('--force');
+            tiArgs.push('--force');
         }
         if ( log_level !== undefined ) {
-            params.push('--log-level', log_level);
+            tiArgs.push('--log-level', log_level);
         }
         if ( sdk  !== undefined ) {
-            params.push('--sdk', sdk);
+            tiArgs.push('--sdk', sdk);
         }
 
 
@@ -67,31 +67,31 @@ exports.init = function(grunt) {
             target          = data.options.target;
 
         if ( alias !== undefined ) {
-            params.push('--alias', alias);
+            tiArgs.push('--alias', alias);
         }
         if ( android_sdk !== undefined ) {
-            params.push('--android-sdk', android_sdk);
+            tiArgs.push('--android-sdk', android_sdk);
         }
         if ( avd_id !== undefined ) {
-            params.push('--avd-id', avd_id);
+            tiArgs.push('--avd-id', avd_id);
         }
         if ( avd_skin !== undefined ) {
-            params.push('--avd-skin', avd_skin);
+            tiArgs.push('--avd-skin', avd_skin);
         }
         if ( debug_host !== undefined ) {
-            params.push('--debug-host', debug_host);
+            tiArgs.push('--debug-host', debug_host);
         }
         if ( keystore !== undefined ) {
-            params.push('--keystore', keystore);
+            tiArgs.push('--keystore', keystore);
         }
         if ( output_dir !== undefined ) {
-            params.push('--output-dir', output_dir);
+            tiArgs.push('--output-dir', output_dir);
         }
         if ( password !== undefined ) {
-            params.push('--password', password);
+            tiArgs.push('--password', password);
         }
         if ( target !== undefined ) {
-            params.push('--target', target);
+            tiArgs.push('--target', target);
         }
 
 
@@ -118,31 +118,31 @@ exports.init = function(grunt) {
             ios_target          = data.options.target;
 
         if ( developer_name !== undefined ) {
-            params.push('--developer-name', developer_name);
+            tiArgs.push('--developer-name', developer_name);
         }
         if ( device_family !== undefined ) {
-            params.push('--device-family', device_family);
+            tiArgs.push('--device-family', device_family);
         }
         if ( distribution_name !== undefined ) {
-            params.push('--distribution-name', distribution_name);
+            tiArgs.push('--distribution-name', distribution_name);
         }
         if ( ios_version !== undefined ) {
-            params.push('--ios-version', ios_version);
+            tiArgs.push('--ios-version', ios_version);
         }
         if ( keychain !== undefined ) {
-            params.push('--keychain', keychain);
+            tiArgs.push('--keychain', keychain);
         }
         if ( ios_output_dir !== undefined ) {
-            params.push('--output-dir', ios_output_dir);
+            tiArgs.push('--output-dir', ios_output_dir);
         }
         if ( pp_uuid !== undefined ) {
-            params.push('--pp-uuid', pp_uuid);
+            tiArgs.push('--pp-uuid', pp_uuid);
         }
         if ( sim_version !== undefined ) {
-            params.push('--sim-version', sim_version);
+            tiArgs.push('--sim-version', sim_version);
         }
         if ( ios_target !== undefined ) {
-            params.push('--target', ios_target);
+            tiArgs.push('--target', ios_target);
         }
 
         return command;

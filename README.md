@@ -1,12 +1,50 @@
-This is a half-baked grunt.js multitask aka [gruntplugin](http://jsfiddle.net/cowboy/qzRjD/show/) that executes [Titanium Command lLne](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) for you and prints the Titanium output to `grunt.log.write()`.
+This is a half-baked grunt.js multitask aka [gruntplugin](http://jsfiddle.net/cowboy/qzRjD/show/) that executes [Titanium Command Line](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) for you and prints the Titanium output to `grunt.log.write()`.
 
 ## Dependencies
 
 You need to have [node.js](http://nodejs.org/), [grunt.js](https://github.com/cowboy/grunt), [titanium](https://npmjs.org/package/titanium) installed for this to work.
 
+# Getting Started
+
+Install from npm.
+
+```
+% npm install grunt-scandium
+```
+
+Add your project's `grunt.js` (`Gruntfile.js` when ~0.4.0).
+
+```javascript
+grunt.loadNpmTasks('grunt-scandium');
+```
+
+# An Example Setup
+
+```javascript
+scandium: {
+    ios: {
+        platform : 'ios',
+        project_dir : '/path/to/your_project',
+        force: true,
+        build_only: false,
+        options: {
+            device_family: 'iphone'
+        }
+    },
+    android: {
+        platform : 'android',
+        project_dir : '/path/to/your_project',
+        options: {
+            android_sdk: '/path/to/android-sdk',
+            target: 'emulator'
+        }
+    }
+}
+```
 
 # Changelog
 
+v0.2.0: Add support for Titanium Log
 v0.1.0: Release.
 
 ----
