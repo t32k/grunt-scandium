@@ -1,6 +1,6 @@
 This is a half-baked grunt.js multitask aka [gruntplugin](http://jsfiddle.net/cowboy/qzRjD/show/) that executes [Titanium Command Line](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) for you and prints the Titanium output to `grunt.log.write()`.
 
-## Dependencies
+# Dependencies
 
 You need to have [node.js](http://nodejs.org/), [grunt.js](https://github.com/cowboy/grunt), [titanium](https://npmjs.org/package/titanium) installed for this to work.
 
