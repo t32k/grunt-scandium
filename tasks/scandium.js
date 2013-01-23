@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             done      = this.async(),
             command   = titanium.cli(this.data);
 
-        // Output Cp=ommand Line
+        // Output Command Line
         grunt.log.writeln('`titanium ' + command.args.join(' ') + '` was initiated.');
 
         // Watching Titanium Command log

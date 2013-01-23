@@ -1,18 +1,15 @@
 module.exports = function(grunt) {
     'use strict';
 
-    grunt.registerMultiTask( 'scandium-clean', 'This executes the `titanium clean` command.', function() {
+    grunt.registerTask( 'scandium-clean', 'This executes the `titanium clean` command.', function() {
 
         // Tell grunt this task is asynchronous.
-        var done    = this.async();
-        var exec    = require('child_process').exec;
-        var command = 'titanium clean';
+        var done    = this.async(),
+            exec    = require('child_process').exec,
+            command = 'titanium clean';
 
         function puts( error, stdout, stderr ) {
-
-            grunt.log.write( '\n\nTitanium output:\n' );
             grunt.log.write( stdout );
-
             if ( error !== null ) {
                 grunt.log.error( error );
                 done(false);
