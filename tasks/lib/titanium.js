@@ -26,7 +26,7 @@ exports.init = function(grunt) {
             sdk             = data.sdk;
 
         if ( platform !== undefined && project_dir !== undefined ) {
-            tiArgs.push('build', '--platform', platform, '--project_dir', project_dir);
+            tiArgs.push('build', '--platform', platform, '--project-dir', project_dir);
         }
         if ( build_only === true ) {
             tiArgs.push('--build-only');
@@ -116,6 +116,10 @@ exports.init = function(grunt) {
             sim_version         = data.options.sim_version,
             // <value>: Target to build for: simulator, device, dist-appstore, or dist-adhoc.
             ios_target          = data.options.target;
+            // <boolean>: Use the retina version of the iOS Simulator.
+            retina              = data.options.retina,
+            // <boolean>: In combination with --retina flag, start the tall version of the retina device.
+            tall              = data.options.tall,
 
         if ( developer_name !== undefined ) {
             tiArgs.push('--developer-name', developer_name);
@@ -128,6 +132,12 @@ exports.init = function(grunt) {
         }
         if ( ios_version !== undefined ) {
             tiArgs.push('--ios-version', ios_version);
+        }
+        if ( retina !== undefined ) {
+            tiArgs.push('--retina');
+        }
+        if ( tall !== undefined ) {
+            tiArgs.push('--tall');
         }
         if ( keychain !== undefined ) {
             tiArgs.push('--keychain', keychain);
