@@ -44,6 +44,7 @@ exports.init = function(grunt) {
             tiArgs.push('--sdk', sdk);
         }
 
+        data.options = data.options || {};
 
         // Android Build Options
         // ============================================
