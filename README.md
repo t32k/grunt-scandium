@@ -49,6 +49,7 @@ scandium: {
 
 # Changelog
 
+- v0.3.1: Add support for retina, tall options, correct directory option
 - v0.3.0: Add support for `titanium clean`
 - v0.2.0: Add support for display titanium log message
 - v0.1.0: Release.

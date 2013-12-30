@@ -1,6 +1,6 @@
 {
   "name": "grunt-scandium",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "This is a half-baked grunt plugin for titanium command line.",
   "main": "grunt.js",
   "directories": {
